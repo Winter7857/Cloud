@@ -7,6 +7,6 @@ module.exports = (app)=>{
     router.post("/login", user_controller.login);
     router.get("/", authjwt, user_controller.getAllUsers);
     router.put("/:id",authjwt,user_controller.updateUserCtrl);
-    router.delete("/:id/:p1/:p2",authjwt,user_controller.deleteUSer);
+    router.delete("/:id",authjwt,user_controller.deleteUSer);
     app.use("/api/auth", router);
 };  
